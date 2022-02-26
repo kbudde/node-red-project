@@ -281,7 +281,7 @@
         "type": "function",
         "z": "0eecbce8ab7e8763",
         "name": "",
-        "func": "let metric={};\n\nmetrics.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.Wifi.RSSI,\n    \"labels\": {\n        \"client\": \"3erstecker\",\n        \"bssid\": msg.payload.Wifi.BSSId,\n        \"channel\": msg.payload.Wifi.Channel,\n        \"ssid\": msg.payload.Wifi.SSId\n    }\n};\nreturn metric;",
+        "func": "let metric={};\n\nmetric.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.Wifi.RSSI,\n    \"labels\": {\n        \"client\": \"3erstecker\",\n        \"bssid\": msg.payload.Wifi.BSSId,\n        \"channel\": msg.payload.Wifi.Channel,\n        \"ssid\": msg.payload.Wifi.SSId\n    }\n};\nreturn metric;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
