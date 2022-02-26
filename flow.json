@@ -46,8 +46,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 320,
-        "y": 220,
+        "x": 290,
+        "y": 140,
         "wires": [
             [
                 "3c1d587cec62a5f2"
@@ -67,8 +67,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 220,
+        "x": 540,
+        "y": 140,
         "wires": []
     }
 ]
