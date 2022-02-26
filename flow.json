@@ -1,1 +1,73 @@
-[]
+[
+    {
+        "id": "2e7cefc009966f3f",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4663190353e683a3",
+        "type": "mqtt-broker",
+        "name": "rabbitmq",
+        "broker": "rabbitmq.rabbitmq.svc.cluster.local",
+        "port": "1883",
+        "clientid": "test-nodered",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f3e19ab4ee0475ea",
+        "type": "mqtt in",
+        "z": "2e7cefc009966f3f",
+        "name": "",
+        "topic": "nodered.example",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "3c1d587cec62a5f2"
+            ]
+        ]
+    },
+    {
+        "id": "3c1d587cec62a5f2",
+        "type": "debug",
+        "z": "2e7cefc009966f3f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 220,
+        "wires": []
+    }
+]
