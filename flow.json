@@ -53,7 +53,7 @@
         "id": "b5f50eec2f38637b",
         "type": "prometheus-metric-config",
         "name": "octopi_printer_power",
-        "help": "Outputs if the printer is powerer on",
+        "help": "Outputs if the printer is powered on",
         "labels": "",
         "mtype": "gauge"
     },
