@@ -185,7 +185,7 @@
         "name": "",
         "topic": "power/3erstecker/POWER1",
         "qos": "2",
-        "datatype": "json",
+        "datatype": "utf8",
         "broker": "4663190353e683a3",
         "nl": false,
         "rap": true,
