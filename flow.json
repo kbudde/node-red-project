@@ -70,5 +70,51 @@
         "x": 740,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "2a7ff4b1b14d7730",
+        "type": "inject",
+        "z": "2e7cefc009966f3f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "nodered.example",
+        "payloadType": "date",
+        "x": 370,
+        "y": 440,
+        "wires": [
+            [
+                "72fc3ba281581162"
+            ]
+        ]
+    },
+    {
+        "id": "72fc3ba281581162",
+        "type": "mqtt out",
+        "z": "2e7cefc009966f3f",
+        "name": "",
+        "topic": "",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4663190353e683a3",
+        "x": 580,
+        "y": 440,
+        "wires": []
     }
 ]
