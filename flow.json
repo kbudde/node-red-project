@@ -183,7 +183,7 @@
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
         "name": "",
-        "topic": "power/3erstecker/IPOWER1",
+        "topic": "power/3erstecker/POWER1",
         "qos": "2",
         "datatype": "json",
         "broker": "4663190353e683a3",
