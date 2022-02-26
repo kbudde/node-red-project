@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "0eecbce8ab7e8763",
+        "type": "tab",
+        "label": "OctopiStecker",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "4663190353e683a3",
         "type": "mqtt-broker",
         "name": "rabbitmq",
@@ -70,5 +78,138 @@
         "x": 540,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "eefd40baac781746",
+        "type": "mqtt in",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "topic": "power/3erstecker/SENSOR",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9421211a0b678475",
+        "type": "mqtt in",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "topic": "power/3erstecker/STATE",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6a7ac85fb1d1e2a",
+        "type": "mqtt in",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "topic": "power/3erstecker/LWT",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f16205c88a8d7b33",
+        "type": "mqtt in",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "topic": "power/3erstecker/cmnd/POWER",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "001a80a257b7108f",
+        "type": "mqtt in",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "topic": "power/3erstecker/INFO1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3cc7f7eb6497ca0",
+        "type": "mqtt in",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "topic": "power/3erstecker/INFO2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c63566d8e11715e",
+        "type": "mqtt in",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "topic": "power/3erstecker/IPOWER1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 400,
+        "wires": [
+            []
+        ]
     }
 ]
