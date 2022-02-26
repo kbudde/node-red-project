@@ -40,7 +40,7 @@
         "name": "test",
         "topic": "nodered.example",
         "qos": "1",
-        "datatype": "utf8",
+        "datatype": "auto",
         "broker": "4663190353e683a3",
         "nl": false,
         "rap": true,
