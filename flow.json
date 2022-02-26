@@ -50,6 +50,14 @@
         "mtype": "gauge"
     },
     {
+        "id": "b5f50eec2f38637b",
+        "type": "prometheus-metric-config",
+        "name": "octopi_printer_power",
+        "help": "Outputs if the printer is powerer on",
+        "labels": "",
+        "mtype": "gauge"
+    },
+    {
         "id": "f3e19ab4ee0475ea",
         "type": "mqtt in",
         "z": "2e7cefc009966f3f",
@@ -163,7 +171,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 190,
-        "y": 340,
+        "y": 420,
         "wires": [
             []
         ]
@@ -212,20 +220,21 @@
         "id": "4c63566d8e11715e",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
-        "d": true,
         "name": "",
         "topic": "power/3erstecker/IPOWER1",
         "qos": "2",
-        "datatype": "auto",
+        "datatype": "json",
         "broker": "4663190353e683a3",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
         "x": 180,
-        "y": 400,
+        "y": 340,
         "wires": [
-            []
+            [
+                "fdd3ac184a09f075"
+            ]
         ]
     },
     {
@@ -292,6 +301,35 @@
         "wires": [
             [
                 "df774ccf1d32fbf7"
+            ]
+        ]
+    },
+    {
+        "id": "59e8bd03823eda3f",
+        "type": "prometheus-exporter",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "metric": "b5f50eec2f38637b",
+        "x": 780,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "fdd3ac184a09f075",
+        "type": "function",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "func": "let metric={};\n\nmetric.payload = {\n    \"op\": \"set\",\n    \"val\": (msg.payload == \"ON\" ? 1 : 0)\n};\nreturn metric;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 340,
+        "wires": [
+            [
+                "59e8bd03823eda3f"
             ]
         ]
     }
