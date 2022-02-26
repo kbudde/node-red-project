@@ -38,7 +38,7 @@
         "type": "mqtt in",
         "z": "2e7cefc009966f3f",
         "name": "test",
-        "topic": "#",
+        "topic": "nodered/example",
         "qos": "1",
         "datatype": "auto",
         "broker": "4663190353e683a3",
