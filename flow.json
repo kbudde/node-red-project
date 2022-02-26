@@ -83,6 +83,7 @@
         "id": "eefd40baac781746",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
+        "d": true,
         "name": "",
         "topic": "power/3erstecker/SENSOR",
         "qos": "2",
@@ -102,6 +103,7 @@
         "id": "9421211a0b678475",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
+        "d": true,
         "name": "",
         "topic": "power/3erstecker/STATE",
         "qos": "2",
@@ -121,6 +123,7 @@
         "id": "f6a7ac85fb1d1e2a",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
+        "d": true,
         "name": "",
         "topic": "power/3erstecker/LWT",
         "qos": "2",
@@ -131,7 +134,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 160,
-        "y": 80,
+        "y": 100,
         "wires": [
             []
         ]
@@ -140,6 +143,7 @@
         "id": "f16205c88a8d7b33",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
+        "d": true,
         "name": "",
         "topic": "power/3erstecker/cmnd/POWER",
         "qos": "2",
@@ -159,6 +163,7 @@
         "id": "001a80a257b7108f",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
+        "d": true,
         "name": "",
         "topic": "power/3erstecker/INFO1",
         "qos": "2",
@@ -178,6 +183,7 @@
         "id": "d3cc7f7eb6497ca0",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
+        "d": true,
         "name": "",
         "topic": "power/3erstecker/INFO2",
         "qos": "2",
@@ -187,8 +193,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 130,
-        "y": 580,
+        "x": 170,
+        "y": 560,
         "wires": [
             []
         ]
@@ -197,6 +203,7 @@
         "id": "4c63566d8e11715e",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
+        "d": true,
         "name": "",
         "topic": "power/3erstecker/IPOWER1",
         "qos": "2",
@@ -211,5 +218,43 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "2569c2299dbafba6",
+        "type": "mqtt in",
+        "z": "0eecbce8ab7e8763",
+        "name": "test",
+        "topic": "powe/3erstecker/#",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "4663190353e683a3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "2754d7968730bf7e"
+            ]
+        ]
+    },
+    {
+        "id": "2754d7968730bf7e",
+        "type": "debug",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 40,
+        "wires": []
     }
 ]
