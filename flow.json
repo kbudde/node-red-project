@@ -42,6 +42,14 @@
         "sessionExpiry": ""
     },
     {
+        "id": "2a671bd8faaf5d39",
+        "type": "prometheus-metric-config",
+        "name": "wifi_rssi",
+        "help": "wifi_rssi as measured by client",
+        "labels": "client,bssid,channel,ssid",
+        "mtype": "gauge"
+    },
+    {
         "id": "f3e19ab4ee0475ea",
         "type": "mqtt in",
         "z": "2e7cefc009966f3f",
@@ -93,8 +101,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 160,
+        "x": 170,
+        "y": 200,
         "wires": [
             []
         ]
@@ -103,7 +111,6 @@
         "id": "9421211a0b678475",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
-        "d": true,
         "name": "",
         "topic": "power/3erstecker/STATE",
         "qos": "2",
@@ -116,7 +123,9 @@
         "x": 170,
         "y": 260,
         "wires": [
-            []
+            [
+                "cfa4c498846ecaf1"
+            ]
         ]
     },
     {
@@ -134,7 +143,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 160,
-        "y": 100,
+        "y": 140,
         "wires": [
             []
         ]
@@ -256,5 +265,34 @@
         "x": 380,
         "y": 40,
         "wires": []
+    },
+    {
+        "id": "df774ccf1d32fbf7",
+        "type": "prometheus-exporter",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "metric": "2a671bd8faaf5d39",
+        "x": 760,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cfa4c498846ecaf1",
+        "type": "function",
+        "z": "0eecbce8ab7e8763",
+        "name": "",
+        "func": "let metric={};\n\nmetrics.payload = {\n    \"op\": \"set\",\n    \"val\": msg.payload.Wifi.RSSI,\n    \"labels\": {\n        \"client\": \"3erstecker\",\n        \"bssid\": msg.payload.Wifi.BSSId,\n        \"channel\": msg.payload.Wifi.Channel,\n        \"ssid\": msg.payload.Wifi.SSId\n    }\n};\nreturn metric;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 260,
+        "wires": [
+            [
+                "df774ccf1d32fbf7"
+            ]
+        ]
     }
 ]
