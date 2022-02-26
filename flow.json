@@ -223,7 +223,7 @@
         "id": "2569c2299dbafba6",
         "type": "mqtt in",
         "z": "0eecbce8ab7e8763",
-        "name": "test",
+        "name": "",
         "topic": "powe/3erstecker/#",
         "qos": "1",
         "datatype": "auto",
@@ -232,7 +232,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 130,
+        "x": 170,
         "y": 40,
         "wires": [
             [
